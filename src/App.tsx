@@ -6,8 +6,8 @@ import LayoutWrapper from './components/LayoutWrapper';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
-import appStyles from './App.module.css'; // General app layout styles for .appContainer
-import './index.css'; // Global CSS variables and base styles
+import appStyles from './App.module.css'; 
+import './index.css'; 
 
 const App: React.FC = () => {
   return (
