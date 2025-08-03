@@ -5,7 +5,7 @@ const ContactPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     alert('Thank you for your message! This is a dummy form.');
-    // In a real app, you'd send this data to a backend API
+    
   };
 
   return (
