@@ -1,14 +1,14 @@
-/* Global CSS variables fallback, will be overridden by JS from themeConfig */
+
 :root {
   --primary-bg: #ffffff;
   --secondary-bg: #f8f9fa;
   --text-color: #343a40;
   --accent-color: #007bff;
-  --accent-color-rgb-val: 0,123,255; /* Default RGB for rgba() usage */
+  --accent-color-rgb-val: 0,123,255; 
   --border-color: #e0e0e0;
   --spacing-unit: 1rem; /* 16px */
 
-  /* Global font properties, set by JS based on theme.css */
+
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -20,7 +20,7 @@ body {
   background-color: var(--primary-bg);
   color: var(--text-color);
   min-height: 100vh;
-  /* Subtle animation for theme changes */
+  
   transition: background-color 0.4s ease, color 0.4s ease, font-family 0.4s ease;
 }
 
@@ -30,10 +30,10 @@ body {
   flex-direction: column;
 }
 
-/* General button styles using variables */
+
 button {
   background-color: var(--accent-color);
-  color: var(--primary-bg); /* Ensure text contrasts accent color */
+  color: var(--primary-bg); 
   border: none;
   padding: calc(var(--spacing-unit) * 0.75) var(--spacing-unit);
   border-radius: 4px;
@@ -45,14 +45,14 @@ button {
 }
 
 button:hover {
-  filter: brightness(1.1); /* Slightly brighter on hover */
+  filter: brightness(1.1);
 }
 
 button:focus-visible {
-  box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb-val), 0.5); /* Accessible focus outline */
+  box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb-val), 0.5); 
 }
 
-/* General input/textarea styles */
+
 input[type="text"],
 input[type="email"],
 textarea,
@@ -64,7 +64,7 @@ select {
   color: var(--text-color);
   font-family: inherit;
   font-size: 1rem;
-  box-sizing: border-box; /* Include padding in width/height */
+  box-sizing: border-box; 
   transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
