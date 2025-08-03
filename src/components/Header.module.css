@@ -1,5 +1,5 @@
 .header {
-  position: sticky; /* Fixed top header */
+  position: sticky; 
   top: 0;
   width: 100%;
   background-color: var(--primary-bg);
@@ -17,7 +17,7 @@
 .logo {
   font-size: calc(var(--spacing-unit) * 1.5);
   font-weight: bold;
-  transition: font-size 0.3s ease; /* Transition font size for responsiveness */
+  transition: font-size 0.3s ease; 
 }
 
 .navigation {
@@ -39,11 +39,11 @@
 }
 
 .activeLink {
-  color: var(--text-color); /* This will be overridden by the next line */
+  color: var(--text-color); 
   text-decoration: none;
   padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Inherit styles from navLink */
+  transition: background-color 0.3s ease, color 0.3s ease; 
   background-color: var(--accent-color);
   color: var(--primary-bg);
   font-weight: bold;
@@ -90,7 +90,7 @@
     align-items: center;
   }
   .themeSwitcher select {
-    flex-grow: 1; /* Make select take remaining space */
+    flex-grow: 1;
     margin-left: calc(var(--spacing-unit) / 2);
   }
 }
