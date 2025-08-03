@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import Header from './components/Header';
+import LayoutWrapper from './components/LayoutWrapper';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import appStyles from './App.module.css'; // General app layout styles for .appContainer
+import './index.css'; // Global CSS variables and base styles
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <div className={appStyles.appContainer}>
+          <Header />
+          <LayoutWrapper>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              {/* Add a 404 page if desired, e.g.: */}
+              {/* <Route path="*" element={<div>404 Not Found</div>} /> */}
+            </Routes>
+          </LayoutWrapper>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

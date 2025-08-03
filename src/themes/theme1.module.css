@@ -1,0 +1,22 @@
+.mainContent {
+  flex-direction: column; /* Stack content vertically */
+  max-width: 960px; /* Constrain width */
+  margin: 0 auto; /* Center content */
+  padding: var(--spacing-unit) 0; /* Adjust padding for centered content */
+}
+
+.contentArea {
+  width: 100%;
+}
+
+/* Specific styling for minimalist look */
+.contentSection {
+  border-radius: 0; /* Sharp corners */
+  box-shadow: none; /* No shadows */
+  margin-bottom: calc(var(--spacing-unit) * 1.5); /* More space between sections */
+}
+
+/* No sidebar in minimalist theme */
+.sidebar {
+  display: none;
+}

@@ -1,0 +1,40 @@
+.mainContent {
+  flex-direction: column; /* Content within a column, grid is inside */
+  padding: var(--spacing-unit);
+}
+
+.contentArea {
+  width: 100%;
+}
+
+/* No direct sidebar in grid theme */
+.sidebar {
+  display: none;
+}
+
+/* Overrides for ProductCard component within Theme 3 */
+/* These styles are for the individual cards when Theme 3 is active */
+/* Note: These styles should ideally be in ProductCard.module.css and conditionally applied based on theme,
+   but for demonstration, we'll override here if needed, or rely on ProductCard's own styles using variables.
+   Let's ensure ProductCard.module.css leverages theme variables as much as possible for cleaner separation.
+   For example, ProductCard's .card class already uses var(--secondary-bg), var(--border-color) etc.
+   If Theme 3 needs specific CARD shadows that are NOT covered by current theme variables, define them here.
+*/
+.cardGrid .card { /* Targeting cards inside the grid if you need specific overrides */
+  border: 2px solid var(--accent-color); /* Bright border */
+  box-shadow: 0 8px 25px rgba(var(--accent-color-rgb-val), 0.4); /* Playful shadow */
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+}
+
+.cardGrid .card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(var(--accent-color-rgb-val), 0.6);
+}
+
+.cardGrid .card button {
+  font-weight: bold;
+  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+  border-radius: 20px; /* Pill-shaped buttons */
+}

@@ -1,0 +1,96 @@
+.header {
+  position: sticky; /* Fixed top header */
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure header is on top */
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo {
+  font-size: calc(var(--spacing-unit) * 1.5);
+  font-weight: bold;
+  transition: font-size 0.3s ease; /* Transition font size for responsiveness */
+}
+
+.navigation {
+  display: flex;
+  gap: var(--spacing-unit);
+}
+
+.navLink {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: var(--secondary-bg);
+  color: var(--accent-color);
+}
+
+.activeLink {
+  color: var(--text-color); /* This will be overridden by the next line */
+  text-decoration: none;
+  padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Inherit styles from navLink */
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  font-weight: bold;
+}
+
+.themeSwitcher label {
+  margin-right: calc(var(--spacing-unit) / 2);
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.themeSwitcher select {
+  padding: calc(var(--spacing-unit) / 2);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(var(--spacing-unit) * 0.75);
+  }
+  .logo {
+    font-size: calc(var(--spacing-unit) * 1.2);
+    margin-bottom: calc(var(--spacing-unit) / 2);
+  }
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: calc(var(--spacing-unit) / 2);
+    margin-bottom: calc(var(--spacing-unit) / 2);
+  }
+  .themeSwitcher {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .themeSwitcher select {
+    flex-grow: 1; /* Make select take remaining space */
+    margin-left: calc(var(--spacing-unit) / 2);
+  }
+}
