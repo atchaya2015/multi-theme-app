@@ -17,11 +17,11 @@ export const useProducts = (): UseProductsResult => {
     const getProducts = async () => {
       try {
         setLoading(true);
-        setError(null); // Clear previous errors
+        setError(null); 
         const data = await fetchProducts();
         setProducts(data);
       } catch (err) {
-        // Type assertion for error is good practice with unknown catch errors
+       
         setError((err as Error).message || "An unknown error occurred.");
       } finally {
         setLoading(false);
@@ -29,7 +29,7 @@ export const useProducts = (): UseProductsResult => {
     };
 
     getProducts();
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   return { products, loading, error };
 };
