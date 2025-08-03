@@ -1,22 +1,21 @@
 .mainContent {
-  flex-direction: column; /* Stack content vertically */
-  max-width: 960px; /* Constrain width */
-  margin: 0 auto; /* Center content */
-  padding: var(--spacing-unit) 0; /* Adjust padding for centered content */
+  flex-direction: column; 
+  max-width: 960px; 
+  margin: 0 auto; 
+  padding: var(--spacing-unit) 0; 
 }
 
 .contentArea {
   width: 100%;
 }
 
-/* Specific styling for minimalist look */
-.contentSection {
-  border-radius: 0; /* Sharp corners */
-  box-shadow: none; /* No shadows */
-  margin-bottom: calc(var(--spacing-unit) * 1.5); /* More space between sections */
-}
 
-/* No sidebar in minimalist theme */
+.contentSection {
+  border-radius: 0; 
+  box-shadow: none; 
+  margin-bottom: calc(var(--spacing-unit) * 1.5); 
+
+
 .sidebar {
   display: none;
 }
