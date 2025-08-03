@@ -2,16 +2,16 @@ import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-import { ThemeName } from '../types/theme'; // Import ThemeName type
+import { ThemeName } from '../types/theme'; 
 
 const Header: React.FC = () => {
   const { currentThemeName, setTheme, currentTheme } = useTheme();
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setTheme(event.target.value as ThemeName); // Cast value to ThemeName
+    setTheme(event.target.value as ThemeName);
   };
 
-  // Dynamically apply header font-family if defined in themeConfig
+  
   const headerStyle = currentTheme.headerFontFamily ? { fontFamily: currentTheme.headerFontFamily } : {};
 
   return (
