@@ -3,7 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import { useProducts } from '../hooks/useProduct';
 import ProductCard from './ProductCard';
 import ProductList from './ProductList';
-import appLayoutStyles from '../App.module.css'; // General app layout styles
+import appLayoutStyles from '../App.module.css'; 
 
 const HomePage: React.FC = () => {
   const { currentTheme } = useTheme();
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
       {!loading && !error && (
         currentTheme.layout === 'grid' ? (
           <div className={appLayoutStyles.cardGrid}> {/* Use appLayoutStyles for the grid container */}
-            {products.slice(0, 7).map(product => ( // Show first 6 products for grid
+            {products.slice(0, 7).map(product => ( 
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
