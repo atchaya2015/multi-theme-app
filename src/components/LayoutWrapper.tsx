@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import appLayoutStyles from '../App.module.css'; // General app layout styles
+import appLayoutStyles from '../App.module.css'; 
 import theme1LayoutStyles from '../themes/theme1.module.css';
 import theme2LayoutStyles from '../themes/theme2.module.css';
 import theme3LayoutStyles from '../themes/theme3.module.css';
@@ -24,7 +24,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
       layoutSpecificStyles = theme3LayoutStyles;
       break;
     default:
-      layoutSpecificStyles = theme1LayoutStyles; // Fallback
+      layoutSpecificStyles = theme1LayoutStyles; 
   }
 
   return (
