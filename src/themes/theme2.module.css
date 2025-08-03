@@ -1,30 +1,29 @@
 .mainContent {
-  flex-direction: row; /* Sidebar and main content side-by-side */
-  align-items: flex-start; /* Align top */
-  padding: 0; /* Remove main padding, handled by sidebar/content */
+  flex-direction: row; 
+  align-items: flex-start; 
+  padding: 0;
 }
 
 .sidebar {
-  width: 250px; /* Fixed width sidebar */
-  min-width: 200px; /* Minimum width */
+  width: 250px; 
+  min-width: 200px; 
   background-color: var(--secondary-bg);
   color: var(--text-color);
   padding: var(--spacing-unit);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  height: auto; /* Allow height to adjust to content */
-  min-height: calc(100vh - var(--header-height, 4rem)); /* Ensure it takes available height below header */
-  position: sticky; /* Make sidebar sticky */
+  height: auto; 
+  min-height: calc(100vh - var(--header-height, 4rem)); 
+  position: sticky; 
   top: var(--header-height, 4rem); /* Stick below header */
   transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
-  overflow-y: auto; /* Enable scrolling for long content */
-  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  overflow-y: auto; 
+  flex-shrink: 0; 
 }
-/* Define --header-height in App.module.css or Header.module.css and pass via CSS variable */
 
 
 .sidebar h3 {
   margin-top: 0;
-  color: var(--accent-color); /* Highlight sidebar heading */
+  color: var(--accent-color);
 }
 
 .sidebar ul {
@@ -52,10 +51,10 @@
   padding: var(--spacing-unit);
 }
 
-/* Specific styling for dark mode sections */
+
 .contentSection {
-  border: 1px solid var(--accent-color); /* Highlight borders */
-  box-shadow: 0 0 15px rgba(var(--accent-color-rgb-val), 0.3); /* Accent shadow */
+  border: 1px solid var(--accent-color); 
+  box-shadow: 0 0 15px rgba(var(--accent-color-rgb-val), 0.3); 
   background-color: var(--secondary-bg);
   padding: calc(var(--spacing-unit) * 1.2);
   margin-bottom: var(--spacing-unit);
@@ -63,12 +62,12 @@
 
 @media (max-width: 768px) {
   .mainContent {
-    flex-direction: column; /* Stack sidebar and content on small screens */
+    flex-direction: column; 
   }
   .sidebar {
-    width: 100%; /* Full width sidebar on mobile */
-    position: static; /* Remove sticky on mobile */
+    width: 100%;
+    position: static; 
     min-height: auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to bottom */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   }
 }
